@@ -23,6 +23,9 @@
   display: flex;
   justify-content: space-around;
 }
+.card-title2 {
+  font-size: 40px;
+}
 .input2 {
   border-radius: 10px;
   height: 35px;

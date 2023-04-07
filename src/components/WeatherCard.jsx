@@ -18,7 +18,7 @@ const WeatherCard = ({ weather, temperature }) => {
                     <h3 className='card-title'>PresiónAtm.:  <b>{weather?.main.pressure} mmHg</b></h3>
                     <h3 className='card-title'>Humedad:  <b>{weather?.main.humidity}%</b></h3>
                     <h3 className='card-title'>Condición: {weather?.weather[0].description}</h3>
-                    <h2>{isCelsius ? `${temperature?.celsius} °C` : `${temperature?.farenheit} °F`}</h2>
+                    <h2 className='card-title2'>{isCelsius ? `${temperature?.celsius} °C` : `${temperature?.farenheit} °F`}</h2>
                 </div>
                 <div className='buton'>
                     <img className='card-desc' src={`https://openweathermap.org/img/wn/${weather?.weather[0].icon}@4x.png`} />
