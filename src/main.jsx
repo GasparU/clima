@@ -1,15 +1,10 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import './assets/css/index.css'
-import { ThemeContextProvider } from './context/ThemeContext'
-// if (!navigator.geolocation) {
-//   alert("Tu navegador no tiene opcion de geolocation")
-//   throw new error("Tu navegador no tiene opcion de geolocation")
-// }
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <ThemeContextProvider>
+createRoot(document.getElementById('root')).render(
+  // <StrictMode>
+  // </StrictMode>,
     <App />
-  </ThemeContextProvider>
 )

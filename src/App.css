@@ -1,0 +1,35 @@
+/* @import "tailwindcss"; */
+
+@keyframes rain {
+    from {
+        background-position: 0% 0%;
+    }
+
+    to {
+        background-position: 20% 100%;
+    }
+}
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+.weather-background {
+    position: relative;
+    overflow: hidden;
+}
+
+.weather-effect::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.15;
+    background-size: 200px;
+    animation: rain 1s linear infinite;
+}
+
+.rain::after {
+    background-image: url('data:image/svg+xml,<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill="%2336A2EB" d="M8 0L5 8l3-3.5L8 8z"/></svg>');
+}
+
+.snow::after {
+    background-image: url('data:image/svg+xml,<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="2" fill="white"/></svg>');
+}
